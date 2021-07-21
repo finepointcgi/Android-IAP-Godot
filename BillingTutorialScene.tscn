@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://BillingController.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Puchase Item" type="Button" parent="."]
+margin_left = 73.75
+margin_top = 21.25
+margin_right = 338.75
+margin_bottom = 121.25
+rect_pivot_offset = Vector2( 62.5, 73.75 )
+text = "Purchase Demo Item"
+
+[node name="Use Item" type="Button" parent="."]
+margin_left = 73.75
+margin_top = 145.0
+margin_right = 338.75
+margin_bottom = 245.0
+rect_pivot_offset = Vector2( 62.5, 73.75 )
+text = "Use Demo Item"
+
+[connection signal="button_down" from="Puchase Item" to="." method="_on_Puchase_Item_button_down"]
+[connection signal="button_down" from="Use Item" to="." method="_on_Use_Item_button_down"]
